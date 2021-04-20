@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Calculadora">
+
+   <TextView
+       android:id="@+id/txtResultado"
+       android:layout_width="match_parent"
+       android:layout_height="100dp"
+       android:gravity="right|bottom"
+       android:textColor="#000000"
+       android:text="123"
+       android:layout_marginBottom="16dp"
+       android:textSize="28sp"/>
+
+    <!-- Primera Fila de Botones -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnAbr"
+            android:layout_margin="4dp"
+            android:text="("
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="22sp"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btnCerr"
+            android:layout_margin="4dp"
+            android:text=")"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="22sp"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btnDel"
+            android:layout_margin="4dp"
+            android:text="del"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="22sp"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btnDiv"
+            android:layout_margin="4dp"
+            android:text="/"
+            android:layout_width="0dp"
+            android:textSize="22sp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <!-- Segunda Fila de Botones -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <Button
+            android:id="@+id/btnSiete"
+            android:layout_margin="4dp"
+            android:text="7"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="22sp"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btnOcho"
+            android:layout_margin="4dp"
+            android:text="8"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="22sp"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btnNueve"
+            android:layout_margin="4dp"
+            android:text="9"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="22sp"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btnMult"
+            android:layout_margin="4dp"
+            android:text="*"
+            android:layout_width="0dp"
+            android:textSize="22sp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+    <!-- Tercera Fila de Botones -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnCuatro"
+            android:layout_margin="4dp"
+            android:text="4"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="22sp"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btnCinco"
+            android:layout_margin="4dp"
+            android:text="5"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="22sp"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btnSeis"
+            android:layout_margin="4dp"
+            android:text="6"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="22sp"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btnRest"
+            android:layout_margin="4dp"
+            android:text="-"
+            android:layout_width="0dp"
+            android:textSize="22sp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <!-- Cuarta Fila de Botones -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnUno"
+            android:layout_margin="4dp"
+            android:text="1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="22sp"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btnDos"
+            android:layout_margin="4dp"
+            android:text="2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="22sp"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btnTres"
+            android:layout_margin="4dp"
+            android:text="3"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="22sp"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btnSum"
+            android:layout_margin="4dp"
+            android:text="+"
+            android:layout_width="0dp"
+            android:textSize="22sp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <!-- Quinta Fila de Botones -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnNeg"
+            android:layout_margin="4dp"
+            android:text="+/-"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="22sp"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btnCero"
+            android:layout_margin="4dp"
+            android:text="0"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="22sp"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btnPunto"
+            android:layout_margin="4dp"
+            android:text="."
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="22sp"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btnIgual"
+            android:layout_margin="4dp"
+            android:text="="
+            android:layout_width="0dp"
+            android:textSize="22sp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>
