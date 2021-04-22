@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -13,23 +14,26 @@
        android:id="@+id/txtResultado"
        android:layout_width="match_parent"
        android:layout_height="80sp"
-       android:textColor="@color/numberButton"
+       android:textColor="@color/actionButton"
+       android:ellipsize="start"
        android:gravity="end"
-       android:maxLines="1"
+       android:singleLine="true"
        android:text="123"
        android:layout_marginBottom="16dp"
-       android:textSize="28sp"/>
+       android:textSize="40sp"/>
 
     <TextView
         android:id="@+id/txtResultado2"
         android:layout_width="match_parent"
         android:layout_height="100sp"
-        android:textColor="@color/numberButton"
+        android:textColor="@color/actionButton"
+        android:autoSizeMaxTextSize="30sp"
+        android:ellipsize="end"
         android:gravity="end"
-        android:maxLines="1"
-        android:text="123"
+        android:singleLine="true"
+        android:text=""
         android:layout_marginBottom="16dp"
-        android:textSize="28sp"/>
+        android:textSize="30sp"/>
 
     <!-- Primera Fila de Botones -->
 
@@ -45,6 +49,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:textSize="22sp"
+            android:background="@color/actionButton"
             android:layout_height="wrap_content"/>
         <Button
             android:id="@+id/btnCerr"
@@ -53,6 +58,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:textSize="22sp"
+            android:background="@color/actionButton"
             android:layout_height="wrap_content"/>
         <Button
             android:id="@+id/btnClr"
@@ -61,6 +67,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:textSize="22sp"
+            android:background="@color/actionButton"
             android:layout_height="wrap_content"/>
         <Button
             android:id="@+id/btnDiv"
@@ -68,6 +75,7 @@
             android:text="/"
             android:layout_width="0dp"
             android:textSize="22sp"
+            android:background="@color/actionButton"
             android:layout_weight="1"
             android:layout_height="wrap_content"/>
 
@@ -86,6 +94,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:textSize="22sp"
+            android:background="@color/actionButton"
             android:layout_height="wrap_content"/>
         <Button
             android:id="@+id/btnOcho"
@@ -94,6 +103,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:textSize="22sp"
+            android:background="@color/actionButton"
             android:layout_height="wrap_content"/>
         <Button
             android:id="@+id/btnNueve"
@@ -102,6 +112,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:textSize="22sp"
+            android:background="@color/actionButton"
             android:layout_height="wrap_content"/>
         <Button
             android:id="@+id/btnMult"
@@ -109,6 +120,7 @@
             android:text="*"
             android:layout_width="0dp"
             android:textSize="22sp"
+            android:background="@color/actionButton"
             android:layout_weight="1"
             android:layout_height="wrap_content"/>
 
@@ -128,6 +140,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:textSize="22sp"
+            android:background="@color/actionButton"
             android:layout_height="wrap_content"/>
         <Button
             android:id="@+id/btnCinco"
@@ -136,6 +149,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:textSize="22sp"
+            android:background="@color/actionButton"
             android:layout_height="wrap_content"/>
         <Button
             android:id="@+id/btnSeis"
@@ -144,6 +158,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:textSize="22sp"
+            android:background="@color/actionButton"
             android:layout_height="wrap_content"/>
         <Button
             android:id="@+id/btnRest"
@@ -151,6 +166,7 @@
             android:text="-"
             android:layout_width="0dp"
             android:textSize="22sp"
+            android:background="@color/actionButton"
             android:layout_weight="1"
             android:layout_height="wrap_content"/>
 
@@ -169,6 +185,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:textSize="22sp"
+            android:background="@color/actionButton"
             android:layout_height="wrap_content"/>
         <Button
             android:id="@+id/btnDos"
@@ -177,6 +194,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:textSize="22sp"
+            android:background="@color/actionButton"
             android:layout_height="wrap_content"/>
         <Button
             android:id="@+id/btnTres"
@@ -185,6 +203,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:textSize="22sp"
+            android:background="@color/actionButton"
             android:layout_height="wrap_content"/>
         <Button
             android:id="@+id/btnSum"
@@ -192,6 +211,7 @@
             android:text="+"
             android:layout_width="0dp"
             android:textSize="22sp"
+            android:background="@color/actionButton"
             android:layout_weight="1"
             android:layout_height="wrap_content"/>
 
@@ -210,6 +230,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:textSize="22sp"
+            android:background="@color/actionButton"
             android:layout_height="wrap_content"/>
         <Button
             android:id="@+id/btnCero"
@@ -218,6 +239,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:textSize="22sp"
+            android:background="@color/actionButton"
             android:layout_height="wrap_content"/>
         <Button
             android:id="@+id/btnDel"
@@ -226,6 +248,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:textSize="22sp"
+            android:background="@color/actionButton"
             android:layout_height="wrap_content"/>
         <Button
             android:id="@+id/btnIgual"
@@ -233,6 +256,7 @@
             android:text="="
             android:layout_width="0dp"
             android:textSize="22sp"
+            android:background="@color/actionButton"
             android:layout_weight="1"
             android:layout_height="wrap_content"/>
 

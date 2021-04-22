@@ -2,14 +2,17 @@ package com.example.taller2
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import net.objecthunter.exp4j.ExpressionBuilder
 
 class Calculadora : AppCompatActivity() {
     //creando variables
 
     lateinit var txtResultado: TextView
+    lateinit var txtResultado2: TextView
     //botones fila 1
     lateinit var btnAbr: Button
     lateinit var btnCerr: Button
@@ -41,8 +44,10 @@ class Calculadora : AppCompatActivity() {
         setContentView(R.layout.activity_calculadora)
 
         txtResultado = findViewById(R.id.txtResultado)
+        txtResultado2 = findViewById(R.id.txtResultado2)
 
         txtResultado.text = "CAS10"
+        txtResultado.text = ""
 
         //agregando el findviewbyid de cada boton
 
@@ -77,109 +82,141 @@ class Calculadora : AppCompatActivity() {
 
         //fila1
         btnAbr.setOnClickListener {
-            txtResultado.text = "("
+            appendOnExpression("(", false)
 
         }
 
         btnCerr.setOnClickListener {
-            txtResultado.text = ")"
+            appendOnExpression(")", false)
 
         }
 
         btnClr.setOnClickListener {
-            txtResultado.text = "CE"
+            txtResultado.text =""
+            txtResultado2.text =""
 
         }
 
         btnDiv.setOnClickListener {
-            txtResultado.text = "/"
+            appendOnExpression("/", false)
 
         }
 
         //fila2
         btnSiete.setOnClickListener {
-            txtResultado.text = "7"
+            appendOnExpression("7", true)
 
         }
 
         btnOcho.setOnClickListener {
-            txtResultado.text = "8"
+            appendOnExpression("8", true)
 
         }
 
         btnNueve.setOnClickListener {
-            txtResultado.text = "9"
+            appendOnExpression("9", true)
 
         }
 
         btnMult.setOnClickListener {
-            txtResultado.text = "*"
+            appendOnExpression("*", false)
 
         }
 
         //fila3
         btnCuatro.setOnClickListener {
-            txtResultado.text = "4"
+            appendOnExpression("4", true)
 
         }
 
         btnCinco.setOnClickListener {
-            txtResultado.text = "5"
+            appendOnExpression("5", true)
 
         }
 
         btnSeis.setOnClickListener {
-            txtResultado.text = "6"
+            appendOnExpression("6", true)
 
         }
 
         btnRest.setOnClickListener {
-            txtResultado.text = "-"
+            appendOnExpression("-", false)
 
         }
 
         //fila4
         btnUno.setOnClickListener {
-            txtResultado.text = "1"
+            appendOnExpression("1", true)
 
         }
 
         btnDos.setOnClickListener {
-            txtResultado.text = "2"
+            appendOnExpression("2", true)
 
         }
 
         btnTres.setOnClickListener {
-            txtResultado.text = "3"
+            appendOnExpression("3", true)
 
         }
 
         btnSum.setOnClickListener {
-            txtResultado.text = "+"
+            appendOnExpression("+", false)
 
         }
 
         //fila5
         btnPunto.setOnClickListener {
-            txtResultado.text = "."
+            appendOnExpression(".", true)
 
         }
 
         btnCero.setOnClickListener {
-            txtResultado.text = "0"
+            appendOnExpression("0", true)
 
         }
 
         btnDel.setOnClickListener {
-            txtResultado.text = "DEL"
+            val string = txtResultado.text.toString()
+            if(string.isNotEmpty()) {
+                txtResultado.text = string.substring(0,string.length -1)
+            }
+            txtResultado2.text = ""
 
         }
 
         btnIgual.setOnClickListener {
-            txtResultado.text = "="
+            try {
+                val Expresion = ExpressionBuilder(txtResultado.text.toString()).build()
+                val Resultado = Expresion.evaluate()
+                val resultadoLargo = Resultado.toLong()
+                if(Resultado==resultadoLargo.toDouble())
+                    txtResultado2.text = resultadoLargo.toString()
+                else
+                    txtResultado2.text = Resultado.toString()
+            } catch (e:Exception) {
+                Log.d("Excepcion", "mensaje: " + e.message)
+            }
 
         }
 
+
+    }
+
+    fun appendOnExpression(string: String, onClear: Boolean) {
+
+        if(txtResultado2.text.isNotEmpty()) {
+            txtResultado.text = ""
+        }
+
+        if(onClear) {
+            txtResultado2.text = ""
+            txtResultado.append(string)
+        } else {
+            txtResultado.append(txtResultado2.text)
+            txtResultado.append(string)
+            txtResultado2.text = ""
+        }
 
     }
 }
