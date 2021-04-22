@@ -13,7 +13,7 @@ class Calculadora : AppCompatActivity() {
     //botones fila 1
     lateinit var btnAbr: Button
     lateinit var btnCerr: Button
-    lateinit var btnDel: Button
+    lateinit var btnClr: Button
     lateinit var btnDiv: Button
     //botones fila 2
     lateinit var btnSiete: Button
@@ -31,9 +31,9 @@ class Calculadora : AppCompatActivity() {
     lateinit var btnTres: Button
     lateinit var btnSum: Button
     //botones fila 5
-    lateinit var btnNeg: Button
-    lateinit var btnCero: Button
     lateinit var btnPunto: Button
+    lateinit var btnCero: Button
+    lateinit var btnDel: Button
     lateinit var btnIgual: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,7 +49,7 @@ class Calculadora : AppCompatActivity() {
         //fila 1
         btnAbr = findViewById(R.id.btnAbr)
         btnCerr = findViewById(R.id.btnCerr)
-        btnDel = findViewById(R.id.btnDel)
+        btnClr = findViewById(R.id.btnClr)
         btnDiv = findViewById(R.id.btnDiv)
         //fila 2
         btnSiete = findViewById(R.id.btnSiete)
@@ -67,9 +67,9 @@ class Calculadora : AppCompatActivity() {
         btnTres = findViewById(R.id.btnTres)
         btnSum = findViewById(R.id.btnSum)
         //fila 5
-        btnNeg = findViewById(R.id.btnNeg)
-        btnCero = findViewById(R.id.btnCero)
         btnPunto = findViewById(R.id.btnPunto)
+        btnCero = findViewById(R.id.btnCero)
+        btnDel = findViewById(R.id.btnDel)
         btnIgual = findViewById(R.id.btnIgual)
 
 
@@ -86,8 +86,8 @@ class Calculadora : AppCompatActivity() {
 
         }
 
-        btnDel.setOnClickListener {
-            txtResultado.text = "del"
+        btnClr.setOnClickListener {
+            txtResultado.text = "CE"
 
         }
 
@@ -160,8 +160,8 @@ class Calculadora : AppCompatActivity() {
         }
 
         //fila5
-        btnNeg.setOnClickListener {
-            txtResultado.text = "-"
+        btnPunto.setOnClickListener {
+            txtResultado.text = "."
 
         }
 
@@ -170,8 +170,8 @@ class Calculadora : AppCompatActivity() {
 
         }
 
-        btnPunto.setOnClickListener {
-            txtResultado.text = "."
+        btnDel.setOnClickListener {
+            txtResultado.text = "DEL"
 
         }
 

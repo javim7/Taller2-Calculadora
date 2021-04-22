@@ -5,24 +5,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/black"
     android:orientation="vertical"
     tools:context=".Calculadora">
 
    <TextView
        android:id="@+id/txtResultado"
        android:layout_width="match_parent"
-       android:layout_height="100dp"
-       android:gravity="right|bottom"
-       android:textColor="#000000"
+       android:layout_height="80sp"
+       android:textColor="@color/numberButton"
+       android:gravity="end"
+       android:maxLines="1"
        android:text="123"
        android:layout_marginBottom="16dp"
        android:textSize="28sp"/>
+
+    <TextView
+        android:id="@+id/txtResultado2"
+        android:layout_width="match_parent"
+        android:layout_height="100sp"
+        android:textColor="@color/numberButton"
+        android:gravity="end"
+        android:maxLines="1"
+        android:text="123"
+        android:layout_marginBottom="16dp"
+        android:textSize="28sp"/>
 
     <!-- Primera Fila de Botones -->
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/btnAbr"
@@ -41,9 +55,9 @@
             android:textSize="22sp"
             android:layout_height="wrap_content"/>
         <Button
-            android:id="@+id/btnDel"
+            android:id="@+id/btnClr"
             android:layout_margin="4dp"
-            android:text="del"
+            android:text="ce"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:textSize="22sp"
@@ -64,7 +78,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        
+
         <Button
             android:id="@+id/btnSiete"
             android:layout_margin="4dp"
@@ -190,9 +204,9 @@
         android:layout_height="wrap_content">
 
         <Button
-            android:id="@+id/btnNeg"
+            android:id="@+id/btnPunto"
             android:layout_margin="4dp"
-            android:text="+/-"
+            android:text="."
             android:layout_width="0dp"
             android:layout_weight="1"
             android:textSize="22sp"
@@ -206,9 +220,9 @@
             android:textSize="22sp"
             android:layout_height="wrap_content"/>
         <Button
-            android:id="@+id/btnPunto"
+            android:id="@+id/btnDel"
             android:layout_margin="4dp"
-            android:text="."
+            android:text="del"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:textSize="22sp"
