@@ -196,6 +196,8 @@ class Calculadora : AppCompatActivity() {
                     txtResultado2.text = Resultado.toString()
             } catch (e:Exception) {
                 Log.d("Excepcion", "mensaje: " + e.message)
+                txtResultado2.text = "Error!"
+                txtResultado.text = ""
             }
 
         }
